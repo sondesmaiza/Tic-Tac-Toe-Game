@@ -18,5 +18,22 @@
         <button id="b">Play</button>
      </div> 
 </div>
+     <!-- Bouton des trois points -->
+     <div id="menu-button" onclick="toggleMenu()">
+        &#8230; <!-- Trois points -->
+      </div>
+      <!-- Liste des options du menu -->
+      <div id="dropdown-menu">
+        <ul>
+          <li onclick="toggleSound()">Son</li>
+          <li onclick="toggleDarkMode()">Dark mode</li>
+          <li onclick="startPvPGame()">Player vs Player</li>
+          <li onclick="startPvEGame()">Player vs IA</li>
+          <li onclick="changeMotifs()">patterns</li>
+          <li onclick="showRank()">Rank</li>
+        </ul>
+      </div>
+      <!-- Zone de jeu -->
+      <div id="game-board"></div>
 </body>
 </html>
