@@ -1,24 +1,9 @@
-h1
-{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: #000;
-  text-align: center;
-  text-transform: capitalize;
-  text-shadow: 3px 3px 3px #FFF;
-  font-size: xx-large;
-  font-weight: bolder;
-  margin: 10px;
-  padding-left: 200px;
-  padding-right: 150px;
-}
-span
-{
-  text-align: center;
-}
-body
-{
-  background-color: #FFF;
-  flex-direction: column;
+body {
+    font-family: Arial, sans-serif;
+    background-color:#FFF;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 body,html
 {
@@ -29,18 +14,61 @@ body,html
   margin: 0;
   padding: 0;
 }
-.d1
-{
-    background-color:#00acc1 ;
-    height: 200px;
-    width: 1500px;
-    border-radius: 50px 50px 50px 50px;
-    align-items: center;
-    display: flex;
-    margin-bottom: 500px;
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
+.d {
+    max-width: 400px;
+    width: 500px;
+    margin: 50px auto;
+    margin-top: 100px;
+    margin-left: 300px;
+    background-color:#4dd0e1 ;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+h1 {  
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #000;
+  text-align: center;
+  text-transform: capitalize;
+  text-shadow: 3px 3px 3px #FFF;
+  font-size: xx-large;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+p {
+    font-size: 18px;
+}
+
+.b4{
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #00acc1;
+    cursor: pointer;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #00acc1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: capitalize;
+    color: #000;
+    border: 3px  solid #000;
+}
+.b4:hover {
+    background-color: #1b85c8;
+}
+.d3{
+    margin-top: 20px;
+}
+.b5 {
+    margin-top: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 /* Style général */
 body {
@@ -51,17 +79,16 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color:#e0f7fa;
+    background-color: #fff;
   }
   /* Bouton des trois points */
   #menu-button {
     position: fixed;
-    top: 20px;
-    left: 50px;
-    font-size: 50px;
-    cursor: pointer;
+      top: 20px;
+      left: 50px;
+      font-size: 50px;
+      cursor: pointer;
   }
-  
   /* Menu déroulant */
   #dropdown-menu {
     position: fixed;
@@ -113,68 +140,17 @@ body {
   .cell:hover {
     background-color: #e0e0e0;
   }
-li
-{
+  li
+  {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: x-large;
     font-weight: bold;
     font-style: oblique;
     text-transform: capitalize;
     text-shadow: #fff;
-}
-li:hover
-{
+    text-align: left;
+  }
+  li:hover
+  {
     box-shadow: 2px 2px 2px #00acc1;
-}
-.d2 {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-gap: 5px;
-  margin: 20px auto;
-  position: fixed;
-}
-.b2 {
-  width: 100px;
-  height: 100px;
-  font-size: 30px;
-  text-align: center;
-  line-height: 100px;
-  background-color: #4dd0e1;
-  border: 1px solid #000;
-  cursor: pointer;
-}
-.b2:active {
-  background-color: #ddd;
-}
-.d
-{
-    text-align: center;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin-top: 600px;
-    padding-left: 5%;
-    position: fixed;
-}
-.b3
-{
-  border-radius: 15px 15px 15px 15px;
-  background-color: #00acc1;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: xx-large;
-  font-weight: bold;
-  font-style: normal;
-  text-transform: capitalize;
-  color: #000;
-  border: 3px  solid #000;
-}
-.b5 {
-  margin-top: 10px;
-  font-size: 20px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
+  }
