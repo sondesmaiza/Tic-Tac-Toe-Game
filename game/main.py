@@ -14,14 +14,37 @@ running = True
 # screen_home, screen_main_game_vs_ai, screen_winner
 current_screen = "screen_home"
 # player, ai, plauyer_1, player_2
-winner = "" 
+winner = ""
+
+game = [
+    [" ", " ", " "],
+    [" ", " ", " "],
+    [" ", " ", " "]
+]
 
 def change_screen(new_screen):
     global current_screen
-    global winner
     current_screen = new_screen
-    winner = ""
     pygame.time.delay(500)
+
+def to_winner_screen(new_winner):
+    global winner
+    global current_screen
+    winner = new_winner
+    current_screen = "screen_winner"
+    pygame.time.delay(500)
+
+def reset_game():
+    global winner
+    winner = ""
+    global game
+    game = [
+        [" ", " ", " "],
+        [" ", " ", " "],
+        [" ", " ", " "]
+    ]
+    change_screen("screen_home")
+
 
 
 while running:
@@ -32,11 +55,11 @@ while running:
     screen.fill(white)
 
     if (current_screen == "screen_main_game_vs_ai"):
-        Screen_MainGameVsAI(pygame, screen,change_screen,winner)
+        Screen_MainGameVsAI(pygame, screen,game,change_screen,to_winner_screen)
     elif (current_screen == "screen_home"):
         Screen_Home(pygame, screen,change_screen)
     elif (current_screen == "screen_winner"):
-        Screen_Winner(pygame, screen, winner,change_screen)
+        Screen_Winner(pygame, screen, winner,reset_game)
     
     
     # Update the display

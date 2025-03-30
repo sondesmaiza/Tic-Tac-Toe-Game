@@ -29,3 +29,6 @@ def draw_ExitGame(pygame, surface, screen_width,change_screen):
         change_screen("screen_home")
 
     return button_rect  # Return button area for click detection
+
+
+
