@@ -3,7 +3,7 @@ from constants.constants import blue,font_size,black,bg
 mini_box_width = 100
 mini_box_height = 100
 
-def draw_Field(pygame, screen, screen_width, game,PlaceMove):
+def draw_Field(pygame, screen, screen_width, game,PlaceMove,change_screen):
     # Define the rectangle for the red box with 100% width and 500 height
     red_box = pygame.Rect(0, 150, screen_width, 500)
     
@@ -16,11 +16,11 @@ def draw_Field(pygame, screen, screen_width, game,PlaceMove):
 
     for i in range(len(game)):
         for j in range(len(game[i])):
-            draw_one_box(i,j,pygame, screen,game,PlaceMove)
+            draw_one_box(i,j,pygame, screen,game,PlaceMove,change_screen)
         
 
 
-def draw_one_box(i,j,pygame, screen,game,PlaceMove):
+def draw_one_box(i,j,pygame, screen,game,PlaceMove,change_screen):
 
     x = 25 + i * (mini_box_width + 25)
     y = 150 + 20 + 25 + j * (mini_box_height + 25)
@@ -43,6 +43,6 @@ def draw_one_box(i,j,pygame, screen,game,PlaceMove):
     mouse_click = pygame.mouse.get_pressed()
     if box.collidepoint(mouse_x, mouse_y) and mouse_click[0]:
         print("Clicked on box",i,j)
-        PlaceMove(i,j)
+        PlaceMove(i,j,change_screen)
 
    
