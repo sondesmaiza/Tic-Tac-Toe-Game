@@ -1,5 +1,7 @@
 import pygame
 from screens.Screen_MainGameVsAI import Screen_MainGameVsAI
+from screens.Screen_Home import Screen_Home
+from screens.Screen_Winner import Screen_Winner
 from constants.constants import *
 
 pygame.init()
@@ -10,7 +12,7 @@ pygame.display.set_caption('Tic-Tac-Toe Game')
 running = True
 
 # screen_home, screen_main_game_vs_ai, screen_winner
-current_screen = "main_game_vs_ai" 
+current_screen = "screen_home"
 # player, ai, plauyer_1, player_2
 winner = "" 
 
@@ -20,8 +22,14 @@ while running:
             running = False
     
     screen.fill(white)
+
+    if (current_screen == "main_game_vs_ai"):
+        Screen_MainGameVsAI(pygame, screen)
+    elif (current_screen == "screen_home"):
+        Screen_Home(pygame, screen)
+    elif (current_screen == "screen_winner"):
+        Screen_Winner(pygame, screen, winner)
     
-    Screen_MainGameVsAI(pygame, screen)
     
     # Update the display
     pygame.display.flip()
