@@ -1,6 +1,6 @@
 from constants.constants import *
+from components.Background import Background
 
 
 def Screen_Home(pygame,screen):
-    rect = pygame.Rect(0, 0, screen_width, 800)  
-    pygame.draw.rect(screen, (255,0,0), rect) 
+    Background(pygame,screen)

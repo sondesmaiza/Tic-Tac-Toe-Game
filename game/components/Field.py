@@ -1,4 +1,4 @@
-from constants.constants import blue,font_size,black
+from constants.constants import blue,font_size,black,bg
 
 mini_box_width = 100
 mini_box_height = 100
@@ -8,7 +8,7 @@ def draw_Field(pygame, screen, screen_width, game,PlaceMove):
     red_box = pygame.Rect(0, 150, screen_width, 500)
     
     # Fill the red rectangle
-    pygame.draw.rect(screen, (255, 255, 255), red_box) 
+    pygame.draw.rect(screen, bg, red_box) 
 
 
 

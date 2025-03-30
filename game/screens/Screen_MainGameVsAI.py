@@ -1,5 +1,6 @@
 from constants.constants import *
 from components.BoxTitle import BoxTitle
+from components.Background import Background
 from components.Field import draw_Field
 from components.ExitGame import draw_ExitGame
 import random
@@ -51,6 +52,7 @@ def PlaceMove(i,j):
 
 
 def Screen_MainGameVsAI(pygame,screen):
+    Background(pygame, screen)
     BoxTitle(pygame, screen)
     draw_Field(pygame, screen, screen_width,game,PlaceMove) 
     draw_ExitGame(pygame, screen, screen_width)

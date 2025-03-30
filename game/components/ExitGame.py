@@ -1,9 +1,7 @@
-from constants.constants import blue, white, black
+from constants.constants import blue, bg, black
 
 def draw_ExitGame(pygame, surface, screen_width):
     # Define the rectangle background (optional, for styling)
-    rect = pygame.Rect(0, 590, screen_width, 210)  
-    pygame.draw.rect(surface, white, rect)  # Background rectangle
     
     # Capsule button properties
     button_width = 200   # Adjust the width of the button

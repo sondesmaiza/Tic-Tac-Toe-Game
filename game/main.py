@@ -12,7 +12,7 @@ pygame.display.set_caption('Tic-Tac-Toe Game')
 running = True
 
 # screen_home, screen_main_game_vs_ai, screen_winner
-current_screen = "screen_home"
+current_screen = "screen_main_game_vs_ai"
 # player, ai, plauyer_1, player_2
 winner = "" 
 
@@ -23,7 +23,7 @@ while running:
     
     screen.fill(white)
 
-    if (current_screen == "main_game_vs_ai"):
+    if (current_screen == "screen_main_game_vs_ai"):
         Screen_MainGameVsAI(pygame, screen)
     elif (current_screen == "screen_home"):
         Screen_Home(pygame, screen)
