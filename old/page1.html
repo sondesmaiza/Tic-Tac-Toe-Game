@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="controle.js"></script>
+</head>
+<body>
+<div class="d">
+    <div class="circle">
+        <img  class="image" src="c:\Users\sonde\OneDrive\Bureau\X_O\imge\image.jpg" alt="Image centrée">
+    </div> 
+    <h1><u><b><i>tic-tac-toe game</i></b></u></h1> 
+    <img class="qr" src="c:\Users\sonde\Downloads\qrcode_play-lh.googleusercontent.com.png">
+    <div class="d1">
+        <button id="b">Play</button>
+     </div> 
+</div>
+     <!-- Bouton des trois points -->
+     <div id="menu-button" onclick="toggleMenu()">
+        &#8230; <!-- Trois points -->
+      </div>
+      <!-- Liste des options du menu -->
+      <div id="dropdown-menu">
+        <ul>
+          <li onclick="toggleSound()">Son</li>
+          <li onclick="toggleDarkMode()">Dark mode</li>
+          <li onclick="startPvPGame()">Player vs Player</li>
+          <li onclick="startPvEGame()">Player vs IA</li>
+          <li onclick="changeMotifs()">patterns</li>
+          <li onclick="showRank()">Rank</li>
+        </ul>
+      </div>
+      <!-- Zone de jeu -->
+      <div id="game-board"></div>
+</body>
+</html>

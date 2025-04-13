@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <script src="controle3.js"></script>
+</head>
+<body>
+    <div class="d">
+        <h1>Player X wins</h1>
+        <p>ou</p>
+        <h1>It's a draw</h1>
+        <div class="d3">
+            <button class="b4" onclick="window.location.href='page2.html'">Another turn</button>
+            <button class="b5" onclick="window.location.href='page1.html'">🏠</button>
+        </div>
+    </div>
+    <!-- Bouton des trois points -->
+    <div id="menu-button" onclick="toggleMenu()">
+        &#8230; <!-- Trois points -->
+      </div>
+      <!-- Liste des options du menu -->
+      <div id="dropdown-menu">
+        <ul>
+          <li onclick="toggleSound()">Son</li>
+          <li onclick="toggleDarkMode()">Dark mode</li>
+          <li onclick="startPvPGame()">Player vs Player</li>
+          <li onclick="startPvEGame()">Player vs IA</li>
+          <li onclick="changeMotifs()">patterns</li>
+          <li onclick="showRank()">Rank</li>
+        </ul>
+      </div>
+      <!-- Zone de jeu -->
+      <div id="game-board"></div>
+</body>
+</html>

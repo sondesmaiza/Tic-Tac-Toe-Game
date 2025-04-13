@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="controle2.js"></script>
+	<style type="text/css">
+.b3 {
+	position: absolute;
+}
+</style>
+</head>
+<body>
+    <div class="d1">
+		<h1><b><u><span>tic-tac-toe game</span></u></b></h1>
+        <!-- Bouton des trois points -->
+     <div id="menu-button" onclick="toggleMenu()">
+        &#8230; <!-- Trois points -->
+    </div>
+    <!-- Liste des options du menu -->
+      <div id="dropdown-menu">
+        <ul>
+          <li onclick="toggleSound()">Son</li>
+          <li onclick="toggleDarkMode()">Dark mode</li>
+          <li onclick="startPvPGame()">Player vs Player</li>
+          <li onclick="startPvEGame()">Player vs IA</li>
+          <li onclick="changeMotifs()">patterns</li>
+          <li onclick="showRank()">Rank</li>
+        </ul>
+      </div>
+    <div class="d">
+      <div  class="d2">
+        <button class="b2"></button>
+        <button class="b2"></button>
+        <button class="b2"></button>
+        <button class="b2"></button>
+        <button class="b2"></button>
+        <button class="b2"></button>
+        <button class="b2"></button>
+        <button class="b2"></button>
+        <button class="b2"></button>
+      </div> 
+    </div>
+    <button class="b3" onclick="window.location.href = 'exit.html';" style="left: 730px; top: 586px; width: 179px; height: 59px">Exit</button>
+</body>
+</html>
