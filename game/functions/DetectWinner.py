@@ -23,6 +23,8 @@ def DetectWinner(game,game_type,player1,player2,change_screen,to_winner_screen):
         win = game[0][2]
 
     final_winner = ""
+
+    
     
     if(win != ""):
         print("Winner is: ", win)
@@ -41,6 +43,25 @@ def DetectWinner(game,game_type,player1,player2,change_screen,to_winner_screen):
         
         print(final_winner)
         to_winner_screen(final_winner)
+        return
+
+
+        # find if there is a draw
+    draw = True
+    for i in range(3):
+        for j in range(3):
+            if game[i][j] == " ":
+                draw = False
+
+
+    if(draw == True):
+        print("Draw")
+        if(game_type == "player_vs_ai"):
+            to_winner_screen("Draw AI vs Player") 
+        elif(game_type == "player_vs_player"):
+            to_winner_screen("Draw Player 1 vs Player 2")
+        return
+
         
         
         

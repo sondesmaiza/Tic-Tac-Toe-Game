@@ -22,6 +22,7 @@ game = [
     [" ", " ", " "]
 ]
 
+
 def change_screen(new_screen):
     global current_screen
     current_screen = new_screen

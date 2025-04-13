@@ -4,6 +4,7 @@ from components.Background import Background
 from components.Field import draw_Field
 from components.ExitGame import draw_ExitGame
 from functions.DetectWinner import DetectWinner
+from model.AI_Move import predict_o_move
 import random
 
 
@@ -30,13 +31,15 @@ def AisMove(change_screen,to_winner_screen,game):
     # AI's move
     global turn
     while True:
-        random_i = random.randint(0, 2)
-        random_j = random.randint(0, 2)
-        if game[random_i][random_j] == " ":
-            game[random_i][random_j] = "O"
-            DetectWinner(game, "player_vs_ai","Player","AI",change_screen,to_winner_screen)
-            turn = "X"
-            break
+        # random_i = random.randint(0, 2)
+        # random_j = random.randint(0, 2)
+
+        # if game[random_i][random_j] == " ":
+        random_i, random_j = predict_o_move(game)
+        game[random_i][random_j] = "O"
+        DetectWinner(game, "player_vs_ai","Player","AI",change_screen,to_winner_screen)
+        turn = "X"
+        break
     # If no empty spaces, change turn back
 
 
