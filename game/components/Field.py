@@ -42,7 +42,6 @@ def draw_one_box(i,j,pygame, screen,game,PlaceMove,change_screen,to_winner_scree
     mouse_x, mouse_y = pygame.mouse.get_pos()
     mouse_click = pygame.mouse.get_pressed()
     if box.collidepoint(mouse_x, mouse_y) and mouse_click[0]:
-        print("Clicked on box",i,j)
         PlaceMove(i,j,change_screen,to_winner_screen,game)
 
    

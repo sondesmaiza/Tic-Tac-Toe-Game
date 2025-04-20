@@ -1,5 +1,6 @@
 import pygame
 from screens.Screen_MainGameVsAI import Screen_MainGameVsAI
+from screens.Screen_MainGamePlayerVsPlayer import Screen_MainGamePlayerVsPlayer
 from screens.Screen_Home import Screen_Home
 from screens.Screen_Winner import Screen_Winner
 from constants.constants import *
@@ -57,10 +58,13 @@ while running:
 
     if (current_screen == "screen_main_game_vs_ai"):
         Screen_MainGameVsAI(pygame, screen,game,change_screen,to_winner_screen)
+    elif (current_screen == "screen_main_game_player_vs_player"):
+        Screen_MainGamePlayerVsPlayer(pygame, screen,change_screen,to_winner_screen)
     elif (current_screen == "screen_home"):
         Screen_Home(pygame, screen,change_screen)
     elif (current_screen == "screen_winner"):
         Screen_Winner(pygame, screen, winner,reset_game)
+    
     
     
     # Update the display
