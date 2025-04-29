@@ -79,6 +79,6 @@ def generate_dataset(num_games=1000, filename="games.json"):
 
 # Run the script
 if __name__ == "__main__":
-    generate_dataset(num_games=10000)
+    generate_dataset(num_games=1000)
 
 # Tic-Tac-Toe-Game
